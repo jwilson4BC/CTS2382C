@@ -1,3 +1,0 @@
-## Run in File server as admins
-
-Update-FSRMClassificationpropertyDefinition
