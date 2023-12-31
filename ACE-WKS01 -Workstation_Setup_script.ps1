@@ -1,6 +1,6 @@
 ﻿<#
 
-get windows 10 configation scripts
+This script will set up windows 10 for the CTS2382c Insteractive Lab 
 
 #>
 
