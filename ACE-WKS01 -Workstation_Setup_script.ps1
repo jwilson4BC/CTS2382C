@@ -8,7 +8,7 @@ get windows 10 configation scripts
 Set-ExecutionPolicy RemoteSigned
 
 #Rename windows 10 (Restart is required)
-Rename-Computer -NewName WKS01-Win10
+Rename-Computer -NewName ACE-WKS01
 
 # Install all of Remote Access Tool Set or RSAT Apps
 Get-WindowsCapability -Online -Name Rsat* | Add-WindowsCapability -online 
