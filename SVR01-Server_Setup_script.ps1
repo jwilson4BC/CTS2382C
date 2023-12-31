@@ -5,7 +5,7 @@ CTS2382c Server 2022 Interactive Lab Setup Script,This Script will set up the en
 
 # Set the DNS IP adress
 $index = Get-NetAdapter -Name Ethernet | Select-Object -ExpandProperty ifindex
-Set-DnsClientServerAddress -InterfaceIndex $index -ServerAddresses ("10.0.0.10")
+Set-DnsClientServerAddress -InterfaceIndex $index -ServerAddresses ("10.0.0.10, 1.1.1.1")
 
 #Set the IP address for the SVR01 server  
 Set-NetIPInterface -InterfaceIndex $index -Dhcp Disabled
