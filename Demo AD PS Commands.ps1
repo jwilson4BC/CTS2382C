@@ -24,6 +24,11 @@ Set-ADObject -Identity "OU=Coffee Shop,DC=coffee,DC=com" -ProtectedFromAccidenta
 # Delete UO Command *need to disable deletion protection*
 Remove-ADOrganizationalUnit -Identity "OU=Coffee Shop,DC=coffee,DC=com"
 
+# Rename the local Administrator account
+Rename-LocalUser -Name "Administrator" -NewName "Backup_Admin"
+
+# Rename the local Guest account
+Rename-LocalUser -Name "Guest" -NewName "Backup_guest"
 
 
 New-ADGroup -Name "Key Managers" -SamAccountName "Key_Managers" -Path "OU=Security Groups,OU=Coffee Shop,DC=coffee,DC=com" -GroupCategory Security -GroupScope Global -DisplayName "Key Managers"
