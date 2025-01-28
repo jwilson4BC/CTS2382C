@@ -17,3 +17,6 @@ Get-WindowsCapability -Online -Name Rsat* | Add-WindowsCapability -online
 Install-module PSWindowsUpdate
 Get-WindowsUpdate -MicrosoftUpdate
 Install-WindowsUpdate -MicrosoftUpdate -AcceptAll -AutoReboot
+
+#join ADDS doman
+Add-Computer -DomainName "YourDomainName" -Credential "YourDomain\YourUsername" -OUPath "OU=YourOU,DC=YourDomain,DC=com" -Restart
